@@ -5,6 +5,7 @@ import { Upload } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { languages } from "@/data/languages";
 
 export const FormJSON = () => {
   const [dragActive, setDragActive] = useState(false)
@@ -82,15 +83,13 @@ export const FormJSON = () => {
               <SelectValue placeholder="Select a language" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="es">Spanish</SelectItem>
-              <SelectItem value="fr">French</SelectItem>
-              <SelectItem value="de">German</SelectItem>
-              <SelectItem value="it">Italian</SelectItem>
-              <SelectItem value="pt">Portuguese</SelectItem>
-              <SelectItem value="ru">Russian</SelectItem>
-              <SelectItem value="zh">Chinese</SelectItem>
-              <SelectItem value="ja">Japanese</SelectItem>
-              <SelectItem value="ko">Korean</SelectItem>
+              {
+                languages.map((language) => (
+                  <SelectItem key={language.code} value={language.code}>
+                    {language.name}
+                  </SelectItem>
+                ))
+              }
             </SelectContent>
           </Select>
         </div>
