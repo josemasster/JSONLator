@@ -71,6 +71,7 @@
 
 html {
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 html body[data-scroll-locked] {

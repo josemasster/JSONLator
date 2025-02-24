@@ -55,7 +55,27 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+      animation: {
+        spotlight: "spotlight 2s ease .75s 1 forwards",
+        "line-shadow": "line-shadow 15s linear infinite",
+      },
+      keyframes: {
+        spotlight: {
+          "0%": {
+            opacity: '0',
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: '1',
+            transform: "translate(-50%,-40%) scale(1)",
+          },
+        },
+        "line-shadow": {
+          "0%": { "background-position": "0 0" },
+          "100%": { "background-position": "100% -100%" },
+        },
+      },
   	}
   },
   plugins: [require("tailwindcss-animate")],
