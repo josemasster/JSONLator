@@ -14,7 +14,7 @@ export async function GET() {
       ok: true,
       status: 200,
       statusText: "OK",
-      body: "hello"
+      body: "service is ok"
     };
     return NextResponse.json(response);
   } catch (error) {
