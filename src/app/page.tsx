@@ -1,8 +1,9 @@
 import { FormJSON } from "@/components/FormJSON";
-import { AnimatedGridPattern } from "@/components/magicui/animated-grid-pattern";
+import { GridPattern } from "@/components/magicui/grid-pattern";
 import { Title } from "@/components/Title";
 import { Spotlight } from "@/components/ui/spotlight";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -13,14 +14,14 @@ export default function Home() {
         <Spotlight className="left-80 top-28 h-[80vh] w-[50vw] hidden lg:flex" fill="lightblue" />
       </div>
       <main className="container mx-auto px-4 py-16 relative">
-        <AnimatedGridPattern
-          numSquares={30}
-          maxOpacity={0.1}
-          duration={3}
-          repeatDelay={1}
+        <GridPattern
+          width={30}
+          height={30}
+          x={-1}
+          y={-1}
+          strokeDasharray={"4 2"}
           className={cn(
-            "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
-            "inset-x-0  h-full skew-y-12 -z-50",
+            "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)] -z-[100]",
           )}
         />
         <div className="max-w-3xl mx-auto text-center space-y-4">
@@ -34,9 +35,13 @@ export default function Home() {
           <div className="mt-8 text-center text-sm dark:text-gray-400 text-neutral-700">
             <p>
               Need help? Contact us at{" "}
-              <a href="mailto:support@jsonlator.com" className="text-primary hover:underline">
-                support@jsonlator.com
-              </a>
+              <Link href="mailto:raulquimbaya4@gmail.com" className="text-primary hover:underline">
+                raulquimbaya4@gmail.com
+              </Link>
+              {" "} or {" "}
+              <Link href="mailto:joseh.jgvr5504@gmail.com" className="text-primary hover:underline">
+                joseh.jgvr5504@gmail.com
+              </Link>
             </p>
           </div>
         </div>
