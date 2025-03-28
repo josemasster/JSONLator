@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌍 JSON Translator - Next.js
 
-## Getting Started
+&#x20;&#x20;
 
-First, run the development server:
+## 📌 Descripción
+
+**JSON Translator** es una aplicación web desarrollada en **Next.js** que permite cargar, traducir y descargar archivos JSON fácilmente. Ideal para desarrolladores y equipos que necesitan traducir archivos JSON en diferentes idiomas.
+
+## 🚀 Características
+
+✅ Subir archivos JSON para su traducción.\
+✅ Convertir archivos JSON en strings y viceversa.\
+✅ Descargar los archivos JSON traducidos.\
+✅ Interfaz moderna y fácil de usar.\
+✅ Rápido procesamiento de archivos en el cliente.
+
+## 🎥 Demo
+
+🚀 [Prueba la app en vivo](https://JSONLator.vercel.app/)
+
+### Light mode:
+
+![image](https://github.com/user-attachments/assets/16bedccd-167f-4879-86ec-6b0cffde7659)
+
+### Dark mode:
+
+![image](https://github.com/user-attachments/assets/d2d26e90-3703-4a65-bc74-4947800f4b6b)
+
+---
+
+## ⚡ Instalación y uso
+
+### 1️⃣ Clonar el repositorio
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/josemasster/JSONLator.git
+cd JSONLator
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2️⃣ Instalar dependencias
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install  # o yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3️⃣ Ejecutar el proyecto en modo desarrollo
 
-## Learn More
+```bash
+npm run dev  # o yarn dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Accede a [**http://localhost:3000**](http://localhost:3000) en tu navegador.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔧 API Endpoints
 
-## Deploy on Vercel
+| Método | Endpoint         | Descripción                                     |
+| ------ | ---------------- | ----------------------------------------------- |
+| `POST` | `/api/translate` | Recibe un JSON y devuelve su versión traducida. |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Ejemplo de petición:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```json
+{
+  "text": "{ \"mensaje\": \"Hola mundo\" }",
+  "targetLang": "en"
+}
+```
+
+Respuesta esperada:
+
+```json
+{
+  "ok": true,
+  "status": 200,
+  "statusText": "OK",
+  "body": "{ \"mensaje\": \"Hello world\" }"
+}
+```
+
+---
+
+## 🤝 Contribuciones
+
+¡Las contribuciones son bienvenidas! 🚀
+
+1. Haz un **fork** del repositorio.
+2. Crea una nueva rama: `git switch -c feature-nueva`
+3. Realiza tus cambios y haz un commit: `git commit -m "Agrega nueva funcionalidad"`
+4. Sube los cambios a tu fork: `git push origin feature-nueva`
+5. Abre un **Pull Request** 🚀
+
+---
+
+¡Gracias por usar **JSON Translator**! 💙
